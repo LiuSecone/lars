@@ -3,6 +3,9 @@ import tensorflow as tf
 """
 Layer-wise Adaptive Rate Scaling minimizer.
 
+When tuning, a large initial_learning_rate (e.g. 1000.0) might be needed for
+good results if using the default value for lars_coefficient.
+
 Based on Algorithm 1 in https://arxiv.org/pdf/1708.03888.pdf.
 
 Usage Example:
