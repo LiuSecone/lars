@@ -34,7 +34,7 @@ Returns:
               debug function that returns dict of values given a Session).
 """
 def createLarsMinimizer(loss, initial_learning_rate, learning_rate_decay_steps,
-                        momentum=0.0, weight_decay=0.0, lars_coefficient=1.0,
+                        momentum=0.0, weight_decay=0.0, lars_coefficient=0.0001,
                         eps=1e-9, use_decay=True, var_list=None):
   if var_list is None:
     var_list = tf.trainable_variables()
